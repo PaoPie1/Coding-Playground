@@ -1,23 +1,15 @@
-// import './App.css'
+import './App.css'
 
-// function App() {
-//   return (
-//     <>
-//       <Text display = "lol" />      
-//       <Text display = "rawr" />
-//     </>
-//   )
-// }
+function App() {
+  return (
+    <>
+      
+    </>
+  )
+}
 
-// function Text({display}) {
-//   return (
-//     <div>
-//       <p>{display}</p>
-//     </div>
-//   )
-// }
 
-// export default App
+export default App
 
 
 
@@ -83,35 +75,35 @@
 
 
 
-import { useState } from 'react';
-import './App.css';
+// import { useState } from 'react';
+// import './App.css';
 
-function App() {
-  // 1. Create a state variable to hold the input text
-  // 'text' stores the value, 'setText' is the function that updates it
-  const [text, setText] = useState("");
+// function App() {
+//   // 1. Create a state variable to hold the input text
+//   // 'text' stores the value, 'setText' is the function that updates it
+//   const [text, setText] = useState("");
 
-  // 2. This function runs every time the user types a letter
-  function handleChange(event) {
-    setText(event.target.value); // Grabs whatever is currently in the box and updates state
-  }
+//   // 2. This function runs every time the user types a letter
+//   function handleChange(event) {
+//     setText(event.target.value); // Grabs whatever is currently in the box and updates state
+//   }
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>Type something below:</h2>
+//   return (
+//     <div style={{ padding: "20px" }}>
+//       <h2>Type something below:</h2>
       
-      {/* 3. Connect the input to state and the change handler */}
-      <input 
-        type="text" 
-        value={text} 
-        onChange={handleChange} 
-        placeholder="Type here..."
-      />
+//       {/* 3. Connect the input to state and the change handler */}
+//       <input 
+//         type="text" 
+//         value={text} 
+//         onChange={handleChange} 
+//         placeholder="Type here..."
+//       />
 
-      {/* 4. Show the live data being automated/captured */}
-      <p>You are typing: <strong>{text}</strong></p>
-    </div>
-  );
-}
+//       {/* 4. Show the live data being automated/captured */}
+//       <p>You are typing: <strong>{text}</strong></p>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
