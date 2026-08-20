@@ -1,31 +1,15 @@
-import './App.css'
+import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      
+      <Home />
     </>
-  )
+  );
 }
 
-
-export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default App;
 
 // import './App.css';
 
@@ -56,25 +40,6 @@ export default App
 
 // export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { useState } from 'react';
 // import './App.css';
 
@@ -91,12 +56,12 @@ export default App
 //   return (
 //     <div style={{ padding: "20px" }}>
 //       <h2>Type something below:</h2>
-      
+
 //       {/* 3. Connect the input to state and the change handler */}
-//       <input 
-//         type="text" 
-//         value={text} 
-//         onChange={handleChange} 
+//       <input
+//         type="text"
+//         value={text}
+//         onChange={handleChange}
 //         placeholder="Type here..."
 //       />
 
