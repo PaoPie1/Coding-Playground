@@ -4,6 +4,23 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  const [actionType, setActionType] = useState(null);
+
+  const handleAdd = () => {
+    setCount(count + 1);
+    setActionType("add");
+  };
+
+  const handleMinus = () => {
+    setCount(count - 1);
+    setActionType("minus");
+  };
+
+  const handleReset = () => {
+    setCount(0);
+    setActionType(null);
+  };
+
   return (
     <>
       <div>
