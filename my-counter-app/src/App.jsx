@@ -26,23 +26,11 @@ function App() {
       <div>
         <h1>My Counter App</h1>
         <div>
-          <p>Count: {count}</p>
+          <p className={`counter-text ${actionType}`}>Count: {count}</p>
         </div>
-        <button
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          Add
-        </button>
-        <button
-          onClick={() => {
-            setCount(count - 1);
-          }}
-        >
-          Minus
-        </button>
-        <button onClick={() => setCount(0)}>Reset</button>
+        <button onClick={handleAdd}>Add</button>
+        <button onClick={handleMinus}>Minus</button>
+        <button onClick={handleReset}>Reset</button>
       </div>
     </>
   );
