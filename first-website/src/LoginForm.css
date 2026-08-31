@@ -1,5 +1,77 @@
 .login-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f6f8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.login-form {
+  background: #ffffff;
+  padding: 40px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form h2 {
+  color: #29672b;
+}
+
+.login-form button {
+  padding: 6px;
+  margin: 8px 0 0 0;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background: #10b981;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 170px;
+}
+
+.login-form button:hover {
+  background: #059669;
+  transform: translateY(-5px);
+}
+
+.input-group {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.input-group label {
+  font-size: 18px;
+  margin: 0 0 3px 0;
+  color: #4b5563;
+}
+
+.input-group input {
+  padding: 8px;
+  border: none;
+  background: #eefdee;
+  outline: none;
+  border-radius: 3px;
+  color: #105802;
+}
+
+.input-group input::-webkit-input-placeholder {
+  color: #777;
+  -webkit-input-fill-color: #777;
+}
+
+.input-group input::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+/* .login-container {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -14,3 +86,47 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.login-form h2 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #92e38e;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #96b894;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #33553a;
+  background: #132a0f;
+  color: white;
+  font-size: 16px;
+}
+
+.submit-btn {
+  border: 2px solid #33553a;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 18px;
+  color: #82b17f;
+  background-color: #132a0f;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background: #1a3914;
+  transform: translateY(-2px);
+  color: white;
+} */
