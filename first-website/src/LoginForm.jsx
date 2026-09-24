@@ -4,6 +4,7 @@ import { useState } from "react";
 function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,8 +19,7 @@ function LoginForm() {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Account Login</h2>
-
+        <h2>Account Login</h2># form for username and password
         <div className="input-group">
           <label>Username</label>
           <input
@@ -33,7 +33,6 @@ function LoginForm() {
             }}
           ></input>
         </div>
-
         <div className="input-group">
           <label>Password</label>
           <input
@@ -47,7 +46,18 @@ function LoginForm() {
             }}
           ></input>
         </div>
-
+        <div className="input-group">
+          <label>Email</label>
+          <input
+            type="text"
+            placeholder="Enter Email..."
+            required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          ></input>
+        </div>
         <button className="submit-btn" type="submit">
           LOGIN
         </button>
