@@ -67,7 +67,15 @@ function LoginForm() {
         <button className="submit-btn" type="submit">
           LOGIN
         </button>
-        {message && <p>{message}</p>}
+        {message && (
+          <p
+            className={
+              message === "Login successful!" ? "success-msg" : "error-msg"
+            }
+          >
+            {message}
+          </p>
+        )}
       </form>
     </div>
   );
