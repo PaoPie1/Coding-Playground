@@ -19,7 +19,9 @@ function LoginForm() {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Account Login</h2># form for username and password
+        <h2>Account Login</h2>
+
+        {/* form for username and password */}
         <div className="input-group">
           <label>Username</label>
           <input
