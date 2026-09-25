@@ -70,63 +70,14 @@
   opacity: 1;
 }
 
-/* .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-form {
-  background: #1e3b2d;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.login-form h2 {
-  margin: 0 0 10px 0;
-  text-align: center;
-  color: #92e38e;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.input-group label {
-  font-size: 14px;
-  color: #96b894;
-}
-
-.login-form input {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #33553a;
-  background: #132a0f;
-  color: white;
-  font-size: 16px;
-}
-
-.submit-btn {
-  border: 2px solid #33553a;
-  border-radius: 12px;
-  padding: 15px;
-  font-size: 18px;
-  color: #82b17f;
-  background-color: #132a0f;
-  cursor: pointer;
-  transition: 0.2s;
+.success-msg {
+  color: #10b981;
   font-weight: bold;
+  margin-top: 10px;
 }
 
-.submit-btn:hover {
-  background: #1a3914;
-  transform: translateY(-2px);
-  color: white;
-} */
+.error-msg {
+  color: #ef4444;
+  font-weight: bold;
+  margin-top: 10px;
+}
