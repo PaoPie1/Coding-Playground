@@ -4,7 +4,7 @@ import { useState } from "react";
 function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(false);
 
@@ -12,7 +12,6 @@ function LoginForm() {
     e.preventDefault();
     console.log("Submitted username: ", username);
     console.log("Submitted password: ", password);
-    console.log("Submitted email: ", email);
 
     if (username === "admin" && password === "123") {
       setMessage("Login successful!");
@@ -55,18 +54,7 @@ function LoginForm() {
             }}
           ></input>
         </div>
-        <div className="input-group">
-          <label>Email</label>
-          <input
-            type="email"
-            placeholder="Enter Email..."
-            required
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          ></input>
-        </div>
+
         <button className="submit-btn" type="submit">
           LOGIN
         </button>
