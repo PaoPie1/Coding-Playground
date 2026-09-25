@@ -6,6 +6,7 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +16,10 @@ function LoginForm() {
 
     if (username === "admin" && password === "123") {
       setMessage("Login successful!");
+      setStatus(true);
     } else {
       setMessage("Login denied!");
+      setStatus(false);
     }
   };
 
@@ -68,13 +71,7 @@ function LoginForm() {
           LOGIN
         </button>
         {message && (
-          <p
-            className={
-              message === "Login successful!" ? "success-msg" : "error-msg"
-            }
-          >
-            {message}
-          </p>
+          <p className={status ? "success-msg" : "error-msg"}>{message}</p>
         )}
       </form>
     </div>
