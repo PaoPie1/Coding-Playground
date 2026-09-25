@@ -1,7 +1,19 @@
 import LoginForm from "./LoginForm";
+import SignUp from "./SignUp";
+import { useState } from "react";
 
 function App() {
-  return <LoginForm />;
+  const [isSigning, setIsSigning] = useState(false);
+
+  return (
+    <div>
+      {isSigning ? (
+        <SignUp />
+      ) : (
+        <LoginForm onToggle={() => setIsSigning(true)} />
+      )}
+    </div>
+  );
 }
 
 export default App;

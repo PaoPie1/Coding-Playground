@@ -1,7 +1,7 @@
 import "./LoginForm.css";
 import { useState } from "react";
 
-function LoginForm() {
+function LoginForm({ onToggle }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -55,9 +55,18 @@ function LoginForm() {
           ></input>
         </div>
 
+        {/* submit info */}
         <button className="submit-btn" type="submit">
           LOGIN
         </button>
+
+        {/* creates a link p to make an account */}
+        <p className="toggle-text">
+          Don't have an account?{" "}
+          <span className="toggle-link" onClick={onToggle}>
+            Create one
+          </span>
+        </p>
         {message && (
           <p className={status ? "success-msg" : "error-msg"}>{message}</p>
         )}
