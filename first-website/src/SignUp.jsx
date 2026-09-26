@@ -1,4 +1,4 @@
-// import "./SignUp.css";
+import "./SignUp.css";
 import { useState } from "react";
 
 function SignUp() {
