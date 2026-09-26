@@ -1,7 +1,7 @@
 import "./SignUp.css";
 import { useState } from "react";
 
-function SignUp() {
+function SignUp({ onToggle }) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -51,6 +51,13 @@ function SignUp() {
         </div>
 
         <button type="submit">SIGN UP</button>
+
+        <p>
+          Already have an account?{" "}
+          <span className="toggle-link" onClick={onToggle}>
+            Log In
+          </span>
+        </p>
       </form>
     </div>
   );

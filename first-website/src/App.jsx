@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       {isSigning ? (
-        <SignUp />
+        <SignUp onToggle={() => setIsSigning(false)} />
       ) : (
         <LoginForm onToggle={() => setIsSigning(true)} />
       )}
