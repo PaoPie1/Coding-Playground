@@ -1,7 +1,7 @@
 import "./LoginForm.css";
 import { useState } from "react";
 
-function LoginForm({ onToggle }) {
+function LoginForm({ onToggle, onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,6 +16,8 @@ function LoginForm({ onToggle }) {
     if (username === "admin" && password === "123") {
       setMessage("Login successful!");
       setStatus(true);
+      // calls the function or prop to load it
+      onLogin();
     } else {
       setMessage("Login denied!");
       setStatus(false);

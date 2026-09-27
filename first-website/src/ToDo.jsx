@@ -1,7 +1,8 @@
 // import "./ToDo.css"
 import { useState } from "react";
 
-function ToDo() {
+// passes on "onLogout" from app.jsx
+function ToDo({ onLogout }) {
   const [todoInput, setTodoInput] = useState("");
   const [todoList, setTodoList] = useState([]);
 
@@ -13,7 +14,7 @@ function ToDo() {
       todoInput,
     ]); /*the ... copies whats inside the todoList then adds the todoInput after the comma */
 
-    todoInput(""); /*resets whats inside the input*/
+    setTodoInput(""); /*resets whats inside the input*/
   };
 
   return (
@@ -33,6 +34,13 @@ function ToDo() {
       </form>
 
       {/* list to show the todo tasks */}
+      <ul className="todo-list">
+        {todoList.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
+      {/* logout button to go back to login form */}
+      <button onClick={onLogout}>Log Out</button>
     </div>
   );
 }
