@@ -12,9 +12,13 @@ int main ()
     {
         std::cout << "Correct!" << std::endl;
     }
+    else if (guess < secret)
+    {
+        std::cout << "Guess Higher" << std::endl;
+    }
     else
     {
-        std::cout << "Incorrect!" << std::endl;
+        std::cout << "Guess Lower" << std::endl;
     }
     std::cout << "You guessed " << guess << std::endl;
 
