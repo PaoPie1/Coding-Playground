@@ -7,21 +7,20 @@ int main ()
     std::cout << "Guess the number!" << std::endl;
 
     
+    do
+    {
+        std::cout << "Enter your guess: " << std::endl;
     
-    std::cout << "Enter your guess: " << std::endl;
     
-    
-    std::cin >> guess;
+        std::cin >> guess;
 
-    
-    if (guess == secret)
-    {
-        std::cout << "Correct!" << std::endl;
-    }
-    
-    while (guess != secret)
-    {
-        if (guess < secret)
+        
+        if (guess == secret)
+        {
+            std::cout << "Correct!" << std::endl;
+        }
+        
+        else if (guess < secret)
         {
             std::cout << "Guess Higher" << std::endl;
         }
@@ -29,12 +28,9 @@ int main ()
         {
             std::cout << "Guess Lower" << std::endl;
         }
-        std::cout << "You guessed " << guess << std::endl;
-        std::cout << "Enter your guess: " << std::endl;
-        std::cin >> guess;
-    }
         
-    std::cout << "Correct!" << std::endl;
+    }
+    while (guess != secret);
     
     
 
