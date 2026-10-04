@@ -11,6 +11,9 @@ function updateDisplay() {
 }
 
 startBtn.addEventListener("click", function () {
+  if (timerId !== null) {
+    return;
+  }
   timerId = setInterval(function () {
     seconds = seconds + 1;
     updateDisplay();
@@ -19,7 +22,8 @@ startBtn.addEventListener("click", function () {
 });
 
 pauseBtn.addEventListener("click", function () {
-  console.log("Pause was clicked!");
+  clearInterval(timerId);
+  timerId = null;
 });
 
 resetBtn.addEventListener("click", function () {
