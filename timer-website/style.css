@@ -4,3 +4,9 @@ body {
   color: white;
   background-color: #1e1e2f;
 }
+
+#display {
+  font-size: 3rem;
+  font-family: monospace;
+  margin: 30px 0;
+}

@@ -3,7 +3,7 @@ const startBtn = document.getElementById("startBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
 
-let centiseconds = 400000;
+let centiseconds = 0;
 let timerId = null;
 
 function pad(number) {
@@ -16,7 +16,7 @@ function updateDisplay() {
   const minutes = Math.floor(((centiseconds / 100) % 3600) / 60);
   const hours = Math.floor(centiseconds / 100 / 3600);
   display.textContent =
-    pad(hours) + ":" + (pad(minutes) + ":" + pad(seconds) + ":" + pad(cs));
+    pad(hours) + ":" + pad(minutes) + ":" + pad(seconds) + ":" + pad(cs);
 }
 
 startBtn.addEventListener("click", function () {
@@ -44,5 +44,3 @@ resetBtn.addEventListener("click", function () {
 });
 
 updateDisplay();
-
-console.log(pad(5), pad(42));
