@@ -4,6 +4,7 @@ const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
 
 let centiseconds = 0;
+let timerId = null;
 
 function pad(number) {
   return number.toString().padStart(2, "0");
@@ -19,9 +20,13 @@ function updateTimer() {
 }
 
 startBtn.addEventListener("click", () => {
-  return setInterval(() => {
+  if (timerId !== null) {
+    return;
+  }
+  timerId = setInterval(() => {
     centiseconds = centiseconds + 1;
     updateTimer();
+    console.log(timerId);
     // console.log(centiseconds);
 
     // console.log(cs);
