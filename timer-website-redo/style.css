@@ -4,3 +4,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
+
+button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+#timer {
+  margin: 10px;
+  font-size: 24px;
+}
