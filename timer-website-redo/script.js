@@ -33,3 +33,12 @@ startBtn.addEventListener("click", () => {
     // console.log(seconds);
   }, 10);
 });
+
+pauseBtn.addEventListener("click", () => {
+  if (timerId === null) {
+    return;
+  }
+
+  clearInterval(timerId);
+  timerId = null;
+});
