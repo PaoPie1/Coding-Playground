@@ -26,11 +26,6 @@ startBtn.addEventListener("click", () => {
   timerId = setInterval(() => {
     centiseconds = centiseconds + 1;
     updateTimer();
-    console.log(timerId);
-    // console.log(centiseconds);
-
-    // console.log(cs);
-    // console.log(seconds);
   }, 10);
 });
 
@@ -41,4 +36,11 @@ pauseBtn.addEventListener("click", () => {
 
   clearInterval(timerId);
   timerId = null;
+});
+
+resetBtn.addEventListener("click", () => {
+  clearInterval(timerId);
+  timerId = null;
+  centiseconds = 0;
+  updateTimer();
 });
